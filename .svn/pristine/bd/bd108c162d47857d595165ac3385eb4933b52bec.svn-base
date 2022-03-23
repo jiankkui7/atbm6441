@@ -1,0 +1,6 @@
+0x425eeda9	atbm_register_common	/wifi_prj/staff/panxuqiang/wifi_prj/branch/atbm_wifi_40M_sdioIot_20200212/hal_apollo/atbm_wifi	EXPORT_SYMBOL_GPL
+0x42d55c03	atbm_core_release	/wifi_prj/staff/panxuqiang/wifi_prj/branch/atbm_wifi_40M_sdioIot_20200212/hal_apollo/atbm_wifi	EXPORT_SYMBOL_GPL
+0xbac5e9ea	atbm_init_common	/wifi_prj/staff/panxuqiang/wifi_prj/branch/atbm_wifi_40M_sdioIot_20200212/hal_apollo/atbm_wifi	EXPORT_SYMBOL_GPL
+0x4efe2ef8	atbm_core_probe	/wifi_prj/staff/panxuqiang/wifi_prj/branch/atbm_wifi_40M_sdioIot_20200212/hal_apollo/atbm_wifi	EXPORT_SYMBOL_GPL
+0x580a5ce9	atbm_unregister_common	/wifi_prj/staff/panxuqiang/wifi_prj/branch/atbm_wifi_40M_sdioIot_20200212/hal_apollo/atbm_wifi	EXPORT_SYMBOL_GPL
+0xecc93688	atbm_free_common	/wifi_prj/staff/panxuqiang/wifi_prj/branch/atbm_wifi_40M_sdioIot_20200212/hal_apollo/atbm_wifi	EXPORT_SYMBOL_GPL

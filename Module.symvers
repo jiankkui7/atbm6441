@@ -1,0 +1,4 @@
+0x441e0881	atbm_core_release	/usr/lchome/jiankui/6441/sdio_driver/hal_apollo/atbm6041_wifi_sdio	EXPORT_SYMBOL_GPL
+0xc41f3ad4	atbm_init_common	/usr/lchome/jiankui/6441/sdio_driver/hal_apollo/atbm6041_wifi_sdio	EXPORT_SYMBOL_GPL
+0x2b2365af	atbm_core_probe	/usr/lchome/jiankui/6441/sdio_driver/hal_apollo/atbm6041_wifi_sdio	EXPORT_SYMBOL_GPL
+0x43b8c0f6	atbm_free_common	/usr/lchome/jiankui/6441/sdio_driver/hal_apollo/atbm6041_wifi_sdio	EXPORT_SYMBOL_GPL

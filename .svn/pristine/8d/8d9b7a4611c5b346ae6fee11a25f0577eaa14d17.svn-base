@@ -1,0 +1,78 @@
+menuconfig ATBM_WIRELESS
+    tristate "Atbm Wireless Lan"
+    default m
+
+if ATBM_WIRELESS
+config ATBM_APOLLO
+    tristate "ATBM_6441 WLAN support"
+    depends on !ATBM_MENUCONFIG
+    help
+
+    This is an experimental driver for the ATBM_6441 chip-set.
+    Enabling this option enables the generic driver without
+    any platform support.
+ 
+    Please select the appropriate platform below.
+  
+if ATBM_MENUCONFIG || ATBM_APOLLO
+choice
+    prompt "select which bus will be used"
+    default ATBM_USB_BUS
+    depends on ATBM_MENUCONFIG || ATBM_APOLLO
+    help
+     Here,you must make sure what interface you will want to use,usb
+     sdio or spi
+config ATBM_SDIO_BUS
+    bool "sdio bus"
+    depends on ATBM_MENUCONFIG || ATBM_APOLLO
+    help
+     sdio bus
+config ATBM_SPI_BUS
+    bool "spi bus"
+    depends on ATBM_MENUCONFIG || ATBM_APOLLO
+    help
+     we will use spi bus
+endchoice
+
+
+menu "Driver Extern Function Select"
+    depends on ATBM_MENUCONFIG || ATBM_APOLLO
+
+
+config ATBM_FUNC_SKB_DEBUG
+    bool "Enable skb debug function to debug skb alloc and free"
+    default n
+config ATBM_FUNC_MEM_DEBUG
+    bool "Enable memory debug function to debug memory alloc and free"
+    default n
+
+endmenu
+
+
+config ATBM_APOLLO_USE_GPIO_IRQ
+    bool "Use GPIO interrupt"
+    depends on (ATBM_MENUCONFIG || ATBM_APOLLO) && ATBM_SDIO_BUS
+    default n
+    help
+     Say Y here if you want to include GPIO IRQ support instead of SDIO IRQ.
+     if unsure, say N.
+
+
+
+config ATBM_WIFIIF1_NAME
+    string "Setting wifi interface 1 name"
+    depends on ATBM_MENUCONFIG || ATBM_APOLLO
+    default "wlan%d"
+    help
+      Set name for wireless interface 1,the length of name is must smaller than 15
+config ATBM_MODULE_NAME
+    string "set module name"
+    depends on ATBM_MENUCONFIG || ATBM_APOLLO
+    default "atbm6041_wifi_spi" if  ATBM_SPI_BUS
+    default "atbm6041_wifi_sdio" if ATBM_SDIO_BUS
+    help 
+     set name for wifi module
+
+
+endif
+endif
